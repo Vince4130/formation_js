@@ -2,15 +2,13 @@
 <html lang="fr">
     <head>
         <meta charset="utf-8">
-        <title>Fonction even</title>
+        <title>Date en français</title>
     </head>
     <body>
         <script src="js/proto.js"></script>
         <script>
-            var nombre = 124;
-            console.log(nombre.even());
-            var nombre = 365;
-            console.log(nombre.even());
+            var today = new Date();
+            document.write(today.dateEnFrancais());
         </script>
     </body>
 </html>

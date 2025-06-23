@@ -14,3 +14,22 @@ String.prototype.toCapitalize = function() {
     
     return words.join(' ')
 }
+
+Date.prototype.dateEnFrancais = function() {
+    
+    var d     = new Date();
+    var year  = d.getFullYear();
+    var day   = d.getDay();
+    var month = d.getMonth();
+
+    var days   = ['Dimanche', 'Lundi', 'Mardi', 'Mercredi', 'Jeudi', 'Vendredi', 'Samedi'];
+    var months = ['janvier', 'février', 'mars', 'avril', 'mai', 'juin', 'juillet', 'août', 'septembre', 'octobre', 'novemnbre', 'décembre'];
+
+    var jour = days[day];
+    var mois = months[month];
+
+    var date = jour + ' ' + d.getDate() + ' ' + mois + ' ' + year;
+
+    return date;
+    
+}
