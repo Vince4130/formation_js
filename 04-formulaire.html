@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="utf-8">
+        <title>Formulaire</title>
+        <script>
+            function calcul() {
+               var number = f.number.value;
+               var result = number*number;
+               //document.write('Le carré de ' + number + ' est ' + result);
+               f.number.value = result;
+            }
+        </script>
+    </head>
+    <body>
+        <form name="f">
+            <input type="text" name="number">
+            <input type="button" value="Carré" onclick="calcul()">
+        </form>
+    </body>
+</html>

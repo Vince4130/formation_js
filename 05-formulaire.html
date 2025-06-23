@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="utf-8">
+        <title>Formulaire</title>
+        <script>
+            function calcul() {
+               var result = eval(f.number.value);
+               f.resultat.value = result;
+            }
+        </script>
+    </head>
+    <body>
+        <form name="f">
+            <input type="text" name="number">
+            <p></p>
+            <input type="button" value="Calcul" onclick="calcul()">
+            <p></p>
+            <input type="text" name="resultat">
+        </form>
+    </body>
+</html>
