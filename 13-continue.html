@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="utf-8">
+        <title>Continue</title>
+        <script>
+            function calculFonction() {
+                for(var i=2; i<=4; i +=0.1) {
+                    if(i.toFixed(1) == 3.0) {
+                        //break;
+                        continue;
+                    }
+                    var res = 1/(i-3);
+                    document.write(i.toFixed(4) + ' : ' + res.toFixed(4)+'<br>');
+                }
+            }
+        </script>
+    </head>
+    <body onload="calculFonction()">
+        
+    </body>
+</html>

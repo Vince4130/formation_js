@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="utf-8">
+        <title>Boucle For in</title>
+        <script>
+            function init() {
+                var tab = ['San Francisco', 'Los Angeles', 'New-York', 'Baltimore', 'Miami'];
+                
+                document.write('Boucle for : ' + '<br>');
+                
+                for(var i=0; i<tab.length; i++) {
+                     document.write(tab[i] + '<br>');
+                }
+
+                document.write('************************************' + '<br>');
+
+                document.write('Boucle for in : ' + '<br>');
+
+                for (var i in tab) {
+                    document.write(tab[i] + '<br>');
+                }
+
+                document.write('$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$' + '<br>');
+
+                document.write('Boucle for of : ' + '<br>');
+
+                for (var ville of tab) {
+                    document.write(ville + '<br>');
+                }
+
+                document.write('####################################' + '<br>');
+
+                document.write('Boucle foreach : ' + '<br>');
+
+                tab.forEach(function(ville, index) {
+                    document.write(ville + '<br>');
+                });
+
+                document.write('####################################' + '<br>');
+
+                document.write('Boucle while : ' + '<br>');
+
+                var i = 0;
+                while(i<tab.length) {
+                    document.write(tab[i] + '<br>');
+                    i++;
+                }
+
+                document.write('####################################' + '<br>');
+
+                document.write('Boucle do while : ' + '<br>');
+
+                var i = 0;
+                do {
+                    document.write(tab[i] + '<br>');
+                    i++;
+                } while(i<tab.length);
+            }
+        </script>
+    </head>
+
+    <body onload="init()">
+       
+    </body>
+
+</html>

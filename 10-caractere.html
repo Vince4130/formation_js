@@ -8,7 +8,10 @@
             function caractere() {
                 var ch = f.letter.value;
                 var res = "";
-                if(ch.toLowerCase() === ch.toUpperCase()) {
+
+                if(ch === "") {
+                    alert('Saisir un caractère');
+                } else if(ch.toLowerCase() === ch.toUpperCase()) {
                     res = 'Autre caractère';
                 } else if(ch.toUpperCase() === ch) {
                     res = 'Majuscule';
@@ -21,19 +24,18 @@
          </script>
     </head>
     <body>
-        
-            <form name="f" style="width: 600px; margin: auto; margin-top: 50px;">
-                <fieldset>
-                    <div class="mb-3">
-                        <label for="lettre" class="form-label">Saisir un caractère</label>
-                        <input type="text" class="form-control" name="letter" maxlength="1" id="lettre">
-                        <p></p>
-                        <input type="button" class="btn btn-success" value="Submit" onclick="caractere()">
-                        <p></p>
-                        <input type="text" class="form-control" name="result">
-                    </div>
-                </fieldset>
-            </form>
-        </div>
+        <form name="f" style="width: 600px; margin: auto; margin-top: 50px; ">
+            <fieldset>
+                <div class="mb-3 border" style="padding: 20px; border-radius: 5px;">
+                    <label for="lettre" class="form-label">Saisir un caractère</label>
+                    <input type="text" class="form-control" name="letter" maxlength="1" id="lettre">
+                    <p></p>
+                    <input type="button" class="btn btn-success" value="Submit" onclick="caractere()">
+                    <p></p>
+                    <input type="text" class="form-control" name="result">
+                </div>
+            </fieldset>
+        </form>
+        <p><a href="https://jsfiddle.net/64j5ty31" target="_blank">Lien</a></p>
     </body>
 </html>
