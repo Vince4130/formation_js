@@ -2,6 +2,14 @@ Number.prototype.even = function() {
     return this.valueOf() % 2 === 0;
 }
 
+/**
+ * Description
+ * 
+ * @var
+ * @name String
+ * @kind method
+ * @type {StringConstructor}
+ */
 String.prototype.toCapitalize = function() {
     
     var chaine = this.valueOf();
@@ -15,14 +23,22 @@ String.prototype.toCapitalize = function() {
     return words.join(' ')
 }
 
+/**
+ * Description
+ * 
+ * @var
+ * @name Date
+ * @kind class
+ * @type {DateConstructor}
+ */
 Date.prototype.dateEnFrancais = function() {
     
-    var d     = new Date();
+    var d     = this;
     var year  = d.getFullYear();
     var day   = d.getDay();
     var month = d.getMonth();
 
-    var days   = ['Dimanche', 'Lundi', 'Mardi', 'Mercredi', 'Jeudi', 'Vendredi', 'Samedi'];
+    var days   = ['dimanche', 'lundi', 'mardi', 'mercredi', 'jeudi', 'vendredi', 'samedi'];
     var months = ['janvier', 'février', 'mars', 'avril', 'mai', 'juin', 'juillet', 'août', 'septembre', 'octobre', 'novemnbre', 'décembre'];
 
     var jour = days[day];
@@ -30,6 +46,27 @@ Date.prototype.dateEnFrancais = function() {
 
     var date = jour + ' ' + d.getDate() + ' ' + mois + ' ' + year;
 
-    return date;
+    return date.toCapitalize();
+}
+
+
+/**
+ * Description
+ * 
+ * @var
+ * @name Date
+ * @type {DateConstructor}
+ */
+Date.prototype.frenchDate = function() {
     
+    var d = this;
+
+    var options = {
+        weekday: "long",
+        year: "numeric",
+        month: "long",
+        day: "numeric",
+    };
+
+    return d.toLocaleDateString('fr-FR', options).toCapitalize();
 }

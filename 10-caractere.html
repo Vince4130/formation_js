@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="utf-8">
+        <title>Caractère</title>
+         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+         <script>
+            function caractere() {
+                var ch = f.letter.value;
+                var res = "";
+                if(ch.toLowerCase() === ch.toUpperCase()) {
+                    res = 'Autre caractère';
+                } else if(ch.toUpperCase() === ch) {
+                    res = 'Majuscule';
+                } else {
+                    res = 'Miniscule';
+                }
+
+                f.result.value = res;
+            }
+         </script>
+    </head>
+    <body>
+        
+            <form name="f" style="width: 600px; margin: auto; margin-top: 50px;">
+                <fieldset>
+                    <div class="mb-3">
+                        <label for="lettre" class="form-label">Saisir un caractère</label>
+                        <input type="text" class="form-control" name="letter" maxlength="1" id="lettre">
+                        <p></p>
+                        <input type="button" class="btn btn-success" value="Submit" onclick="caractere()">
+                        <p></p>
+                        <input type="text" class="form-control" name="result">
+                    </div>
+                </fieldset>
+            </form>
+        </div>
+    </body>
+</html>
