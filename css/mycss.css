@@ -1,0 +1,24 @@
+.buttons {
+    display: flex;
+    justify-content: center;
+    column-gap: 50px;
+}
+
+.myHorloge {
+    text-align: center;
+    /*width: 600px;*/
+    font-weight: bold;
+}
+
+.myForm {
+    width: 600px; 
+    margin: auto; 
+    margin-top: 50px;
+    padding: 10px;
+}
+
+.myDiv {
+    padding: 20px;
+    border-radius: 5px;
+    margin: auto;
+}

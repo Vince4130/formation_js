@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="utf-8">
+        <title>Expression Régulière</title>
+        <link rel="stylesheet" href="css/mycss.css">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+        <script>
+            function tester() {
+                var exp = new RegExp(/^[a-z0-9A-Z._\-]+@[a-z0-9._\-]{2,}\.[a-z{2,4}$]/);
+                var email = f.adresse.value;
+
+                if(exp.test(email)) {
+                    f.adresse.value = 'email correct';
+                } else {
+                    f.adresse.value = 'email incorrect';
+                }
+
+            }
+        </script>
+    </head>
+    <body>
+        <form name="f" class="myForm">
+            <fieldset>
+                <div class="mb-3 border myDiv">
+                    <label for="horloge" class="myHorloge">RegExp</label>
+                    <input type="text" class="form-control" name="adresse" style="font-weight: bold; text-align: center;">
+                    <div class="buttons">
+                        <input type="button" class="btn btn-success" value="Tester" style="margin-top: 10px; width: 100px;" onclick="tester()">
+                    </div>   
+                </div>
+            </fieldset>
+        </form>
+    </body>
+</html>
