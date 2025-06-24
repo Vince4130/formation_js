@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="utf-8">
+        <title>OnKey Event</title>
+        <link rel="stylesheet" href="css/mycss.css">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+        <style>
+            img {
+                border: 0.51rem black solid;
+            }
+        </style>
+        <script>
+            function copy() {
+                f.ta2.value = f.ta1.value.toUpperCase();
+            }
+        </script>
+    </head>
+    <body>
+       <form name="f" style="width: 600px; margin: auto; margin-top: 50px; ">
+            <fieldset>
+                <div class="mb-3 border" style="padding: 20px; border-radius: 5px;">
+                    <label for="texta1">TextArea1</label>
+                    <textarea class="form-control" name="ta1" id="texta1" cols="40" rows="5" onkeyup="copy();"></textarea>
+                    <br>
+                    <br>
+                    <label for="texta2">TextArea2</label>
+                    <textarea class="form-control" name="ta2" id="texta2" cols="40" rows="5"></textarea>
+                </div>
+            </fieldset>
+        </form>
+    </body>
+</html>

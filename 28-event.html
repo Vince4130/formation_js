@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="utf-8">
+        <title>Query Selector</title>
+        <link rel="stylesheet" href="css/mycss.css">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+        <style>
+            img {
+                border: 0.51rem black solid;
+            }
+        </style>
+        <script>
+            function displayCoord(ev) {
+                console.log(ev);
+                var span = document.getElementById('coord');
+                span.innerHTML = ev.offsetX + ', ' + ev.offsetY + 'px';
+            }
+        </script>
+    </head>
+    <body>
+        <div class="image-span">
+            <img src="img/ansible.webp" alt="Ansible" onmousemove="displayCoord(event);">
+            <span id="coord"></span>
+        </div>
+    </body>
+</html>

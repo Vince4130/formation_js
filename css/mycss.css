@@ -52,6 +52,15 @@
     margin-top: 50px;
 }
 
+.image-span {
+    display: flex;
+    flex-direction: column;
+    width: 400px;
+    align-items: center;
+    margin-top: 50px;
+    margin: auto;
+}
+
 .perso-border {
     display: flex;
     flex-direction: column;
@@ -60,4 +69,9 @@
 
 #b1, #b2, #b3 {
     width: 150px;
+}
+
+.myList {
+    display: flex;
+    justify-content: center;
 }
