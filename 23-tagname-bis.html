@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8" />
+    <title>getElementsByTagName()</title>
+    <style>
+      h2 {
+        font-size: 4rem;
+      }
+    </style>
+    <script>
+      var tailleH2, tailleP;
+      function init() {
+        var h2 = document.getElementsByTagName('h2');
+        tailleH2 = window.getComputedStyle(h2[0]).fontSize;
+        var p = document.getElementsByTagName('p');
+        tailleP = window.getComputedStyle(p[0]).fontSize;
+      }
+      function gros() {
+        var h2 = document.getElementsByTagName('h2');
+        var p = document.getElementsByTagName('p');
+        for (var i=0; i<h2.length; i++) {
+          h2[i].style.fontSize = parseInt(tailleH2)*1.2+'px';
+        }
+        for (var i=0; i<p.length; i++) {
+          p[i].style.fontSize = parseInt(tailleP)*1.2+'px';
+        }
+      }
+      function normaux() {
+        var h2 = document.getElementsByTagName('h2');
+        var p = document.getElementsByTagName('p');
+        for (var i=0; i<h2.length; i++) {
+          h2[i].style.fontSize = tailleH2;
+        }
+        for (var i=0; i<p.length; i++) {
+          p[i].style.fontSize = tailleP;
+        }
+      }
+    </script>
+  </head>
+  <body onload="init();">
+    <button onclick="gros();">Gros caractères</button>
+    <button onclick="normaux();">Caractères normaux</button><br />
+    <h2>Titre h2</h2>
+    <p>
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vitae diam et
+      quam auctor rutrum.
+    </p>
+    <p>
+      Ut posuere ullamcorper augue, quis lacinia odio cursus non. Aenean
+      ultricies venenatis consequat. Nam vel metus pretium, feugiat sem vitae,
+      volutpat ex.
+    </p>
+    <h2>Un autre titre h2</h2>
+    <p>
+      Suspendisse pellentesque metus est, in congue lacus congue ac. Etiam quis
+      odio euismod dui commodo faucibus et vitae magna.
+    </p>
+    <p>
+      Praesent venenatis metus in massa semper, eu posuere ante finibus.
+      Maecenas vitae tincidunt neque.
+    </p>
+  </body>
+</html>

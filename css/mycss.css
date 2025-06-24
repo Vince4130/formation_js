@@ -43,3 +43,20 @@
 .input-form {
     margin-bottom: 10px;
 }
+
+.image-border {
+    display: flex;
+    justify-content: center;
+    column-gap: 50px;
+    margin-top: 50px;
+}
+
+.perso-border {
+    display: flex;
+    flex-direction: column;
+    margin-top: 50px;
+}
+
+#b1 {
+    width: 150px;
+}

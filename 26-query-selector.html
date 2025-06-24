@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="utf-8">
+        <title>Query Selector</title>
+        <link rel="stylesheet" href="css/mycss.css">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+        <style>
+            img {
+                border: 1rem transparent solid;
+            }
+        </style>
+        <script>
+            function resizeImg() {
+                var small = document.querySelectorAll('.petit');
+                var big   = document.querySelectorAll('.grand');
+
+                for(var i=0; i<small.length; i++) {
+                    small[i].style.width = '10rem';
+                }
+                
+                for(var i=0; i<big.length; i++) {
+                    big[i].style.width = '20rem';
+                }
+                
+            }
+        </script>
+    </head>
+    <body onload="resizeImg();">
+        <img src="img/ansible.webp" alt="Ansible" class="petit">
+        <img src="img/ansible.webp" alt="Ansible" class="grand">
+        <img src="img/ansible.webp" alt="Ansible" class="petit">
+        <img src="img/ansible.webp" alt="Ansible" class="grand">
+        <img src="img/ansible.webp" alt="Ansible" class="petit">
+        <img src="img/ansible.webp" alt="Ansible" class="grand">
+        <img src="img/ansible.webp" alt="Ansible" class="petit">
+        <img src="img/ansible.webp" alt="Ansible" class="grand">
+        <img src="img/ansible.webp" alt="Ansible" class="petit">
+        <img src="img/ansible.webp" alt="Ansible" class="grand">
+        <img src="img/ansible.webp" alt="Ansible" class="petit">
+        <img src="img/ansible.webp" alt="Ansible" class="grand">
+        <img src="img/ansible.webp" alt="Ansible" class="petit">
+        <img src="img/ansible.webp" alt="Ansible" class="grand">
+        <img src="img/ansible.webp" alt="Ansible" class="petit">
+        <img src="img/ansible.webp" alt="Ansible" class="grand">
+        <img src="img/ansible.webp" alt="Ansible" class="petit">
+        <img src="img/ansible.webp" alt="Ansible" class="grand">
+        <img src="img/ansible.webp" alt="Ansible" class="petit">
+        <img src="img/ansible.webp" alt="Ansible" class="grand">
+        <img src="img/ansible.webp" alt="Ansible" class="petit">
+        <img src="img/ansible.webp" alt="Ansible" class="grand">
+        <img src="img/ansible.webp" alt="Ansible" class="petit">
+        <img src="img/ansible.webp" alt="Ansible" class="grand">
+        <img src="img/ansible.webp" alt="Ansible" class="petit">
+        <img src="img/ansible.webp" alt="Ansible" class="grand">
+    </body>
+</html>

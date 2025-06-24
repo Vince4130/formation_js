@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="utf-8">
+        <title>ClassName</title>
+        <link rel="stylesheet" href="css/mycss.css">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+        <style>
+            img {
+                border: 1rem transparent solid;
+            }
+        </style>
+        <script>
+            function getClassePerso() {
+                var perso = document.getElementsByClassName('perso');
+                 var but  = document.getElementById('b1');
+
+                if(but.innerHTML == 'Try It') {
+                    but.innerHTML = 'Reset';
+                    for(var i=0; i<perso.length; i++) {
+                        if(perso[i].localName == 'img') {
+                                perso[i].style.border = '1rem solid red';
+                        } else {
+                                perso[i].style.color = 'lightgreen';
+                        }
+                    }
+                } else {
+                    but.innerHTML = 'Try It';
+                     for(var i=0; i<perso.length; i++) {
+                        if(perso[i].localName == 'img') {
+                                perso[i].style.border = '1rem solid transparent';
+                        } else {
+                                perso[i].style.color = 'black';
+                        }
+                    }
+                }
+                
+            }
+        </script>
+    </head>
+    <body>
+        <!-- <div class="mb-3 image-border"> -->
+            <img src="img/ansible.webp" alt="Ansible" class="perso">
+            <img src="img/ansible.webp" alt="Ansible"  class="perso">
+            <img src="img/ansible.webp" alt="Ansible">
+            <img src="img/ansible.webp" alt="Ansible">
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Repudiandae architecto laborum sequi corporis tempore perspiciatis dolore est aperiam, explicabo pariatur enim id ipsum minima sed velit dolorem, inventore aliquam atque?</p>    
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aspernatur voluptate in dicta fuga eos animi autem reprehenderit illo explicabo, numquam obcaecati libero placeat ab consectetur doloribus eum ducimus! Tenetur, optio?</p>
+            <p class="perso">Any blue moon can lazily sell another Keystone light to the grizzly beer, but it takes a real Left Hand Milk Stout to completely assimilate a mitochondrial beer. For example, the Sierra Nevada about another Sam Adams indicates that a Brewers Reserve of the Dixie Beer sanitizes a colt 45 defined by a beer. A Pilsner of the Dixie Beer, the Corona Extra, and a lover beyond a customer are what made America great!</p>
+            <p class="perso">The Hops Alligator Ale near a Rolling Rock
+For example, the black velvet indicates that another Hops Alligator Ale underhandedly brainwashes a jersey cow inside the bud light. When a miller light behind a Strohs is pathetic, the St. Pauli Girl reaches an understanding with a Jamaica Red Ale. The Hoptoberfest gives the last beer to a flirty Labatts, or a chain saw behind a bull ice derives perverse satisfaction from some Alaskan lager. Some monkey bite earns enough for a beer, or a lover behind another miller figures out a bottle of beer around the Stella Artois.</p>
+        <!-- </div> -->
+        <div class="buttons">
+                <button type="button" class="btn btn-primary" id="b1" onclick="getClassePerso();">Try It</button>
+        </div>
+    </body>
+</html>
