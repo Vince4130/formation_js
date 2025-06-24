@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="utf-8">
+        <title>Array Methods</title>
+        <script>
+           function myArray() {
+                var prenoms = ['Jean', 'Pierre', 'Laetitia', 'David', 'Jade', 'Christel'];
+                document.write(prenoms + '<br>');
+                prenoms.splice(1,0, 'Anaïs');
+                document.write(prenoms + '<br>');
+                prenoms.pop();
+                document.write(prenoms + '<br>');
+                prenoms.unshift('Christel');
+                document.write(prenoms + '<br>');
+                prenoms.push('Sandrine');
+                document.write(prenoms + '<br>');
+                prenoms.sort();
+                document.write(prenoms + '<br>');
+                var tab2 = prenoms.slice(0,3);
+                document.write(tab2 + '<br>');
+           }
+        </script>
+    </head>
+    <body onload="myArray()">
+        
+    </body>
+</html>
