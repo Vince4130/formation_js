@@ -22,3 +22,24 @@
     border-radius: 5px;
     margin: auto;
 }
+
+#njf {
+    margin-top: 10px;
+}
+
+.image {
+    display: flex !important;
+    justify-content: center !important;
+    align-content: center;
+}
+
+.myForm {
+    width: 600px;
+    margin: auto;
+    margin-top: 50px; 
+    padding: 20px;
+}
+
+.input-form {
+    margin-bottom: 10px;
+}

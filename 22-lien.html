@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="utf-8">
+        <title>Déplacement imgae</title>
+        <script>
+            var marge = 0;
+
+            function zero() {
+                var ima = document.querySelector('#image');
+                ima.style.marginLeft = '0rem';
+                marge = 0;
+            }
+            function quinze() {
+                var ima = document.querySelector('#image');
+                ima.style.marginLeft = '15rem';
+                marge = 15;
+            }
+
+            function quarante() {
+                var ima = document.querySelector('#image');
+                ima.style.marginLeft = '40rem';
+                marge = 40;
+            }
+
+            function plusDix() {
+                marge += 10;
+                var ima = document.querySelector('#image');
+                ima.style.marginLeft = marge + 'rem';
+            }
+        </script>
+    </head>
+    <body>
+        <img src="img/ansible.webp" alt="Ansible" id="image">
+        <br>
+         <a href="javascript:zero();">0 rem</a>
+        <a href="javascript:quinze();">15 rem</a>
+        <a href="javascript:quarante();">40 rem</a>
+        <a href="javascript:plusDix();">+10 rem</a>
+    </body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="utf-8">
+        <title>Image</title>
+        <link rel="stylesheet" href="css/mycss.css">
+        <script>
+            function changeImage() {
+                var image = document.querySelector('#monimage');
+                
+                if(image.getAttribute('src') == 'img/ansible.webp') {
+                    image.setAttribute('src', 'img/js.webp');
+                } else {
+                    image.setAttribute('src', 'img/ansible.webp');
+                }
+
+            }
+        </script>
+    </head>
+    <body>
+        <div class="image">
+            <img src="img/ansible.webp" alt="ansible" onclick="changeImage()" id="monimage">
+        </div>
+    </body>
+</html>
