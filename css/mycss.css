@@ -75,3 +75,12 @@
     display: flex;
     justify-content: center;
 }
+
+.myButton {
+    width: 150px;
+}
+
+.division {
+    border: 0.5rem solid lightgray;
+    margin: 1rem;
+}
