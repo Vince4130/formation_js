@@ -18,7 +18,7 @@
                         ima   =  persons[i].picture.large;
                         email = persons[i].email;
                         phone =  persons[i].phone;
-                        div.innerHTML +='<div display="flex"><img src="' + ima + '"><br>' + name + '<br>'+ email + '<br>' + phone +'</div>';                    
+                        div.innerHTML +='<div class="contenu"><img src="' + ima + '">' + name + '<br>'+ email + '<br>' + phone +'</div>';                    
                     }
                 });
             }
@@ -26,6 +26,13 @@
         <style>
             #container {
                 display: flex;
+                flex-direction: column;
+                align-items: center;
+                row-gap: 20px;
+            }
+            .contenu {
+               display: flex;
+               column-gap: 20px;
             }
         </style>
     </head>
