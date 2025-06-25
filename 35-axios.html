@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="utf-8">
+        <title>Axios</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous"></script>
+        <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+        <script>
+
+            function init() {
+                axios.get('https://jsonplaceholder.typicode.com/users').then(function(reponse) {
+                    console.log(reponse.data);
+                    var tab = document.getElementById('tab');
+                    tab.innerHTML = '<thead><tr><th>id</th><th>Name</th><th>Mail</th><th>City</th></tr></thead>';
+                    tab.innerHTML += '<tbody>';
+                    var persons = reponse.data;
+                    for(var i=0; i <persons.length; i++) {
+                        id = persons[i].id;
+                        pers = persons[i].name;
+                        city = persons[i].address.city;
+                        email = persons[i].email;
+                        tab.innerHTML += "<tr><td>" + id +"</td><td>" + pers + "</td><td>" + email + "</td><td>" +city + "</td></tr>";
+                    }
+                    tab.innerHTML += '</tbody>';
+                });
+            }
+            /* https://jsonplaceholder.typicode.com/users */
+        </script>
+    </head>
+    <body onload="init();">
+        <table class="table table-striped table-bordered table-hover" id="tab"></table>
+    </body>
+</html>
